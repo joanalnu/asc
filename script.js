@@ -7,10 +7,10 @@
  */
 function loadComponents() {
     // Load navigation
-    fetch('nav.html')
+    fetch('../../nav.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('nav-container').innerHTML = data;
+            document.getElementById('navbar').innerHTML = data;
             // Setup hamburger menu after navigation is loaded
             setupHamburgerMenu();
             // Setup smooth scrolling after navigation is loaded
@@ -19,7 +19,7 @@ function loadComponents() {
         .catch(error => console.error('Error loading navigation:', error));
 
     // Load footer
-    fetch('footer.html')
+    fetch('../../footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-container').innerHTML = data;
@@ -73,8 +73,8 @@ function createEquations() {
 
         setTimeout(() => {
             equation.remove();
-        }, 25000);
-    }, 3000);
+        }, 2500);
+    }, 300);
 }
 
 /**
@@ -121,6 +121,8 @@ function addPhysicsInteractions() {
  */
 function handleNavbarScroll() {
     const navbar = document.getElementById('navbar');
+    if (!navbar) return;  // Exit if navbar doesn't exist
+
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
@@ -132,22 +134,32 @@ function handleNavbarScroll() {
  * Sets up smooth scrolling for navigation links
  */
 function setupSmoothScrolling() {
-    const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+    const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a, footer a');
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+            const href = this.getAttribute('href');
 
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            // Only handle anchor links
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+
+                closeMobileMenu();
             }
-
-            closeMobileMenu();
+                // For other links (not starting with #), allow default navigation
+            // but close mobile menu if open
+            else {
+                closeMobileMenu();
+            }
         });
     });
 
@@ -307,10 +319,27 @@ function init() {
     setupFormSubmission();
     addPhysicsInteractions();
     setupMobileDropdowns(); // Add this line
+    setupDesktopDropdowns(); // Add desktop dropdown toggle for better UX
 
     // Initial checks
     handleScrollAnimations();
     handleNavbarScroll();
+}
+
+/**
+ * Sets up desktop dropdown toggle on click for better UX
+ */
+function setupDesktopDropdowns() {
+    const desktopDropdowns = document.querySelectorAll('.dropdown > a');
+
+    desktopDropdowns.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Prevent navigation on click to toggle submenu
+            e.preventDefault();
+            const parent = this.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
 }
 
 // Event listeners
