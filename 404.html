@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASC</title>
-    <link rel="stylesheet" href="styles.css">
-    <base href="/">
+    <title>404 | Center for Theoretical Physics</title>
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-<!-- Animated background particles -->
-<div class="particles" id="particles"></div>
+<!-- Particles background -->
+<div id="particles" class="particles"></div>
 
-<!-- Mobile overlay -->
-<div class="mobile-overlay" id="mobileOverlay"></div>
-
+<!-- Navigation -->
 <div id="navbar"></div>
 
-<!--content-->
+<!-- Mobile Menu Overlay -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- Main Content -->
+<main class="regular-page">
+    <header class="page-header">
+        <div class="container">
+            <h1>404</h1>
+            <div class="breadcrumb">
+                <a href="/index.html">Home</a> /
+                <span>404</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-content container">
+        <!-- Your content goes here -->
+        <article>
+            <h2>It seems the content you were looking for just fell into a black hole!</h2>
+            <p>Probably this page is currently being maintained or no longer exists.</p>
+
+
+            <div class="link-group">
+<!--                <h3>Related Links</h3>-->
+                <a href="index.html" class="content-link">Return to the Homepage</a>
+                <a href="ideas.md" class="content-link">Check out the latest <i>News & Ideas!</i></a>
+                <a href="outreach/mailing.html" class="content-link">Subscribe to our Mailing list</a>
+            </div>
+        </article>
+    </section>
+</main>
 
 <!-- Footer -->
-<div id="footer-container"></div>
+<footer id="footer-container"></footer>
 
-<script src="2-script.js"></script>
+<script src="../../2-script.js"></script>
 </body>
 </html>
