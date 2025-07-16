@@ -451,14 +451,14 @@ section {
 }
 
 /* Team Section */
-.team-grid {
+.news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.team-member {
+.news-card {
     text-align: center;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
@@ -470,7 +470,14 @@ section {
     overflow: hidden;
 }
 
-.team-member::before {
+.news-card a {
+    color: #64ffda;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.news-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -482,18 +489,18 @@ section {
     transition: opacity 0.3s ease;
 }
 
-.team-member:hover::before {
+.news-card:hover::before {
     opacity: 1;
 }
 
-.team-member:hover {
+.news-card:hover {
     transform: translateY(-5px);
 }
 
-.team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+.news-card img {
+    width: 250px;
+    height: 150px;
+    border-radius: 20px;
     margin-bottom: 1rem;
     border: 3px solid rgba(100, 255, 218, 0.3);
     transition: all 0.3s ease;
@@ -501,19 +508,19 @@ section {
     z-index: 1;
 }
 
-.team-member:hover img {
+.news-card:hover img {
     border-color: #64ffda;
     transform: scale(1.05);
 }
 
-.team-member h4 {
+.news-card h4 {
     margin-bottom: 0.5rem;
     color: #64ffda;
     position: relative;
     z-index: 1;
 }
 
-.team-member p {
+.news-card p {
     color: #cccccc;
     position: relative;
     z-index: 1;
@@ -761,7 +768,7 @@ footer {
     }
 
     .research-grid,
-    .team-grid {
+    .news-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -799,8 +806,7 @@ footer {
 
 
 
-
-//* Regular Page Styles */
+/* Regular Page Styles */
 .regular-page {
     padding-top: 80px;
     min-height: calc(100vh - 160px);
