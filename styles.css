@@ -885,6 +885,10 @@ footer {
     border-radius: 0 8px 8px 0;
 }
 
+.content-block p {
+    padding: 1rem;
+}
+
 .styled-list {
     list-style: none;
     padding: 0;
@@ -935,5 +939,74 @@ footer {
 
     .page-content {
         padding: 0 1rem 2rem;
+    }
+}
+
+
+/* Table Styles */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 2rem 0;
+    border-radius: 10px;
+    background: rgba(15, 15, 35, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.styled-table th {
+    background: linear-gradient(45deg, rgba(100, 255, 218, 0.3), rgba(187, 134, 252, 0.2));
+    color: #64ffda;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+}
+
+.styled-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: middle;
+}
+
+.styled-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.styled-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.styled-table tbody tr:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+/* Zebra striping option (uncomment to use) */
+/*
+.styled-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+}
+*/
+
+/* Responsive Tables */
+@media (max-width: 768px) {
+    .styled-table {
+        font-size: 0.85rem;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 0.75rem 0.5rem;
     }
 }
