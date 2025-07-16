@@ -7,7 +7,7 @@
  */
 function loadComponents() {
     // Load navigation
-    fetch('../../nav.html')
+    fetch('/nav.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar').innerHTML = data;
@@ -19,7 +19,7 @@ function loadComponents() {
         .catch(error => console.error('Error loading navigation:', error));
 
     // Load footer
-    fetch('../../footer.html')
+    fetch('/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-container').innerHTML = data;
