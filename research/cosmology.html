@@ -1,28 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASC</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>Cosmology | Center for Theoretical Physics</title>
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-<!-- Animated background particles -->
-<div class="particles" id="particles"></div>
+<!-- Particles background -->
+<div id="particles" class="particles"></div>
 
-<!-- Mobile overlay -->
-<div class="mobile-overlay" id="mobileOverlay"></div>
-
+<!-- Navigation -->
 <div id="navbar"></div>
 
-<h1>Cosmology @ ASCTP</h1>
-<p>Cosmology is the branch of astrophysics that studies the Universe as a unity, its origin, evolution, composition and fate. At the ASC Center for Theoretical Physics we focus on inflation theories, the Theory of Recombination and the Crisis in Cosmology - also known as Hubble Tension.</p>
-<p>Furthermore, we also are part of the LIGO-VIRGO-KAGRA Collaboration, DESI Collaboration, EUCLID Consortium, and Cosmic Probe Telescope.</p>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- Main Content -->
+<main class="regular-page">
+    <header class="page-header">
+        <div class="container">
+            <h1>Cosmology</h1>
+            <div class="breadcrumb">
+                <a href="/index.html">Home</a> /
+                <a href="/research/index.html">Research</a> /
+                <span>Cosmology</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-content container">
+        <!-- Your content goes here -->
+        <article>
+            <h2>Cosmology is the study of the Universe as a whole, its origin, evolutions, composition and fate.</h2>
+            <p>This is a paragraph with a <a href="#">regular link</a> that inherits the site's link styling. For more prominent links, use <a href="#" class="highlight-link">highlighted links</a> when appropriate.</p>
+
+            <div class="content-block">
+                <h3>Cosmology at ASCTP</h3>
+                <p>Cosmology is the branch of astrophysics that studies the Universe as a unity, its origin, evolution, composition and fate. At the ASC Center for Theoretical Physics we focus on inflation theories, the Theory of Recombination and the Crisis in Cosmology - also known as Hubble Tension.</p>
+                <p>Furthermore, we also are part of the LIGO-VIRGO-KAGRA Collaboration, DESI Collaboration, EUCLID Consortium, and Cosmic Probe Telescope.</p>
+            </div>
+
+            <div class="link-group">
+                <h3>Related Links</h3>
+                <a href="#" class="content-link">Related Page 1</a>
+                <a href="#" class="content-link">Related Page 2</a>
+                <a href="#" class="content-link">Related Page 3</a>
+            </div>
+        </article>
+    </section>
+</main>
 
 <!-- Footer -->
-<div id="footer-container"></div>
+<footer id="footer-container"></footer>
 
-<script src="../2-script.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>
