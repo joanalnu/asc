@@ -1,0 +1,28 @@
+{
+  "faculty": [
+    {
+      "id": "john-doe",
+      "name": "Dr. John Doe",
+      "title": "Professor of Quantum Field Theory",
+      "description": "Specializing in quantum gravity and holographic principles with over 20 years of research experience.",
+      "publications": "Author of 150+ papers including 'Quantum Entanglement in Holographic Models' (2023).",
+      "contact": {
+        "mail": "j.doe@ctp.example.edu",
+        "tel": "+1 (555) 123-4567",
+        "location": "Center for Theoretical Physics, Room 314"
+      }
+    },
+    {
+      "id": "jane-smith",
+      "name": "Dr. Jane Smith",
+      "title": "Professor of String Theory",
+      "description": "Leading researcher in M-theory and its applications to cosmology.",
+      "publications": "Recent work includes 'D-Brane Dynamics in Warped Spacetimes' (2024).",
+      "contact": {
+        "mail": "j.smith@ctp.example.edu",
+        "tel": "+1 (555) 987-6543",
+        "location": "Center for Theoretical Physics, Room 215"
+      }
+    }
+  ]
+}
